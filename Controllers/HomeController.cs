@@ -18,11 +18,11 @@ namespace aspnetcore_angular_sample.Controllers
                 showArea = true, showPoint = true, fullWidth = true
             };
             var data = new {
-                labels = new[] {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"},
+                labels = new[] {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"},
                 series = new[] {
-                    new[] {1, 5, 2, 5, 4, 3},
-                    new[] {2, 3, 4, 8, 1, 2},
-                    new[] {5, 4, 3, 2, 1, 0}
+                    new[] {1, 5, 2, 5, 4, 3, 7},
+                    new[] {2, 3, 4, 8, 1, 2, 7},
+                    new[] {5, 4, 3, 2, 1, 0, 7}
                 }
             };
             ViewData["ResultsFromNode"] = await nodeServices.InvokeAsync<string>("chartModule.js", "line", options, data);
